@@ -194,7 +194,7 @@ private:
     Node *head;
 };
 
-class Grapgh
+class graph
 {
     LinkedList *array;
     int size;
@@ -215,7 +215,7 @@ class Grapgh
     }
 
 public:
-    Grapgh(int size)
+    graph(int size)
     {
         setSize(size);
         this->array = new LinkedList[getSize()];
@@ -236,7 +236,7 @@ public:
     }
     void BFS(int vertix)
     {
-        cout << "BFS traversal of the Grapgh is :";
+        cout << "BFS traversal of the graph is :";
         bool *visited = new bool[getSize()];
         for (int i = 0; i < getSize(); i++)
         {
@@ -267,7 +267,7 @@ public:
 };
 int main()
 {
-    Grapgh g(5);
+    graph g(5);
     g.addEdge(0, 1);
     g.addEdge(0, 2);
     g.addEdge(1, 2);
